@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Lab 3-5</title>
+</head>
+
+<body>
+    <header>
+        <h1>Insectomania</h1>
+        <ul class="navigation">
+            <a href="#" class="navigation__panel">Home</a>
+            <a href="#" class="navigation__panel">Create</a>
+        </ul>
+        <div class="header__search-bar">
+            <input id="search-bar" class="search-bar" type="text" placeholder="Search...">
+            <button id="search" class="search-button">Search</button>
+        </div>
+    </header>
+    <main>
+        <aside>
+            <h2>Manage Insects</h2>
+            <div class="sort-section">
+                <p class="sort-section-text">Sort insects by price:</p>
+                <button id="sort-button" class="switch">
+                    <div class="slider"></div>
+                </button>
+            </div>
+            <hr class="aside__dividing-line">
+            <p class="sort-section-text">Count net worth:</p>
+            <button id="count-button" class="count-button">Count</button>
+            <button id="add-button" class="count-button">Add</button>
+            <div class="total-net-worth">
+                <p class="total-net-worth-text">Total net worth:</p>
+                <p id="net-worth-price" class="total-net-worth-price total-net-worth-text">$</p>
+            </div>
+        </aside>
+        <div class="content__div" id="content">
+        </div>
+    </main>
+    <script type="module" src="./scripts/main-script.js"></script>
+</body>
+
+</html>

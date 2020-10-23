@@ -1,0 +1,278 @@
+header {
+    border: #aae7ec 2px solid;
+    height: 65px;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+body {
+    background-color: #d9f6f9;
+}
+
+aside {
+    background-color: white;
+    border: #aae7ec 2px solid;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 7px;
+    font-size: 40px;
+    color: #96d5db;
+}
+
+.navigation {
+    margin-left: 10px;
+    width: 180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.navigation__panel {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    color: #96d5db;
+}
+
+main {
+    display: flex;
+    margin-top: 5px;
+}
+
+.content__div {
+    background-color: white;
+    width: 1550px;
+    border: #aae7ec 2px solid;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.header__search-bar {
+    margin-left: 800px;
+    width: 350px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.search-bar {
+    border: #98d4db 2px solid;
+    height: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.search-button {
+    background-color: #71bfc7;
+    border: none;
+    height: 30px;
+    width: 100px;
+    color: white;
+    border-radius: 7%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+.search-button:active {
+    background-color: #5d989f;
+    outline: none;
+}
+
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-weight: lighter;
+    color: #2196F3;
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.sort-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+}
+
+.sort-section-text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+    color: #2196F3;
+}
+
+.aside__dividing-line {
+    width: 90%;
+    background-color: #9ecce3;
+    height: 1px;
+    margin-top: 0;
+}
+
+.count-button {
+    background-color: #2196F3;
+    border: none;
+    height: 50px;
+    width: 150px;
+    color: white;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 1px;
+    font-size: 22px;
+}
+
+.count-button:active {
+    background-color: #196bab#196bab;
+    outline: none;
+}
+
+.total-net-worth-text {
+    color: #7dbaea;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.total-net-worth {
+    width: 70%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.template-div {
+    width: 500px;
+    height: 700px;
+    border: black 3px solid;
+    margin-left: 20px;
+    margin-top: 15px;
+    border-radius: 25px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5f1fb;
+}
+
+.template-image {
+    width: 300px;
+    height: 300px;
+    border: #196bab 2px solid;
+    margin: 0 auto;
+    margin-top: -10px;
+    background-image: url("/Assets/catepillar.jpg");
+    background-size: 300px;
+    border-radius: 20px;
+}
+
+.template-title {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #196bab;
+    font-size: 30px;
+}
+
+.template-text {
+    margin-left: 10px;
+    margin-top: 0px;
+    color: #258cdd;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+.template-price {
+    display: flex;
+    flex-direction: row;
+    margin-left: 70%;
+    color: #74acd8;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#add-button {
+    margin-top: 10px;
+}
+
+.aside__buttons {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.edit-button {
+    background-color: #63b3f2;
+    border: none;
+    height: 50px;
+    width: 150px;
+    color: white;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 1px;
+    font-size: 22px;
+}
+
+.edit-button:active {
+    background-color: #5093c7;
+}
+
+.remove-button {
+    background-color: #e31414;
+    border: none;
+    height: 50px;
+    width: 150px;
+    color: white;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 1px;
+    font-size: 22px;
+}
+
+.remove-button:active {
+    background-color: #bd0c0c;
+}
+
+.total-net-worth-price {}
+
+.sort-checkbox {}
+
+#add-button {}
+
+#content {}
+
+#net-worth-price {}
+
+.switch {
+    display: inline-block;
+    width: 65px;
+    height: 34px;
+    background-color: white;
+    border-radius: 20px;
+    padding:0px,0px,1px,1px;
+}
+.slider{
+    border-radius: 50%;
+    width:25px;
+    height: 25px;
+    background-color: #c7c5c5;
+}
+.slider.active{
+    float: right;
+    transition: 0.45s;
+    background-color: #258cdd;
+}
