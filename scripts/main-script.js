@@ -66,6 +66,7 @@ search.addEventListener('click', () => {
 });
 
 clear.addEventListener('click',()=>{
+    document.getElementById("search-bar").value = '';
     insects.length=0;
     updateList(insects)
     counter=1;
