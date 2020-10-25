@@ -9,14 +9,15 @@ const sort = document.getElementById('sort-button');
 const sortSlider = document.querySelector(".slider");
 const contentBox = document.getElementById('content');
 const search = document.getElementById('search');
+const clear=document.getElementById('clear');
 let isOn = false;
 let counter = 1;
 let insects = [];
 
-elementAdder.addEventListener('click', (event) => {
+elementAdder.addEventListener('click', () => {
     let id = counter;
     counter += 1;
-    let name = Math.random().toString(36).substring(7) + " Caterpillar";
+    let name = Math.random().toString(25).substring(7) + " Caterpillar";
     let description = "The cute, grass-eating creature wants to be your friend";
     let price = Math.floor(Math.random() * 100);
     let insect = new Insect(id, name, description, price);
@@ -26,7 +27,7 @@ elementAdder.addEventListener('click', (event) => {
     document.getElementById("search-bar").value = '';
 })
 
-count.addEventListener('click', (event) => {
+count.addEventListener('click', () => {
     let totalPrice = 0;
     for (let i = 0; i < insects.length; i++) {
         totalPrice += insects[i].price;
@@ -34,7 +35,7 @@ count.addEventListener('click', (event) => {
     document.getElementById('net-worth-price').innerText = totalPrice + '$';
 })
 
-sort.addEventListener('click', (event) => {
+sort.addEventListener('click', () => {
     sortSlider.classList.toggle("active");
     if (isOn) {
         updateList(insects)
@@ -57,9 +58,15 @@ function updateList(givenList) {
         AddInsect({ id, name, description, price, })
     }
 }
-search.addEventListener('click', (event) => {
+search.addEventListener('click', () => {
     let text = document.getElementById("search-bar").value;
     let regEx = new RegExp(text, 'i');
     let searchResult = insects.filter(insect => regEx.test(insect.name) || regEx.test(insect.description));
     updateList(searchResult)
+});
+
+clear.addEventListener('click',()=>{
+    insects.length=0;
+    updateList(insects)
+    counter=1;
 });

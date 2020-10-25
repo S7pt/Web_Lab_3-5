@@ -61,7 +61,7 @@ main {
 
 .header__search-bar {
     margin-left: 800px;
-    width: 350px;
+    width: 400px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -275,4 +275,18 @@ h2 {
     float: right;
     transition: 0.45s;
     background-color: #258cdd;
+}
+.clear-button{
+    background-color: #c50606;
+    border: none;
+    height: 30px;
+    width: 100px;
+    color: white;
+    border-radius: 7%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+.clear-button:active{
+    background-color: #980a0a;
 }
