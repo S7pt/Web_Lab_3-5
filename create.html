@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/create.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Insectomania</h1>
+        <ul class="navigation">
+            <a href="index.html" class="navigation__panel">Home</a>
+            <a href="#" class="navigation__panel">Create</a>
+        </ul>
+    </header>
+    <main>
+        <div class="add-element">
+                <h1 class="create-title">Create Insect</h1>
+
+                <label for="name-input">Name</label>
+                <input type="text" class="any-input" name="name-input" id="name-input" placeholder="Enter name...">
+
+                <label for="description-input">Description</label>
+                <textarea class="description-input" name="description-input" id="description-input" cols="30" rows="3"
+                    placeholder="Enter description..."></textarea>
+
+                <label for="prices">Price</label>
+                <input type="number" class="any-input" name="price-input" id="price-input" placeholder="Enter price...">
+
+                <button class="create-button" id="create-button">Create</button>
+        </div>
+    </main>
+    <script src="./scripts/create.js"></script>
+</body>
+
+</html>

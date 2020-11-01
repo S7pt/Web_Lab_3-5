@@ -13,13 +13,14 @@ const clear=document.getElementById('clear');
 let isOn = false;
 let counter = 1;
 let insects = [];
+let totalPrice;
 
 elementAdder.addEventListener('click', () => {
     let id = counter;
     counter += 1;
     let name = Math.random().toString(25).substring(7) + " Caterpillar";
     let description = "The cute, grass-eating creature wants to be your friend";
-    let price = Math.floor(Math.random() * 100);
+    let price = Math.floor(Math.random() * 100)+1;
     let insect = new Insect(id, name, description, price);
     insects.push(insect);
     AddInsect({ id, name, price, description });
@@ -28,7 +29,7 @@ elementAdder.addEventListener('click', () => {
 })
 
 count.addEventListener('click', () => {
-    let totalPrice = 0;
+    totalPrice = 0;
     for (let i = 0; i < insects.length; i++) {
         totalPrice += insects[i].price;
     }
@@ -66,7 +67,9 @@ search.addEventListener('click', () => {
 });
 
 clear.addEventListener('click',()=>{
+    document.getElementById("search-bar").value = '';
     insects.length=0;
+    totalPrice=0;
     updateList(insects)
     counter=1;
 });

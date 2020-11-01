@@ -1,0 +1,76 @@
+header {
+    border: #aae7ec 2px solid;
+    height: 65px;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+body {
+    background-color: #d9f6f9;
+}
+h1,label {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 7px;
+    font-size: 40px;
+    color: #96d5db;
+}
+
+.navigation {
+    margin-left: 10px;
+    width: 180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.navigation__panel {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    color: #96d5db;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.add-element{
+    margin-top:25px;
+    background-color: white;
+    border-radius: 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.create-title{
+    font-size:70px;
+    margin-right:7px;
+}
+input{
+    border:2px #aae7ec solid;
+    border-radius:15px;
+    margin-top:5px;
+}
+.description-input{
+    border:2px #aae7ec solid;
+    border-radius:15px;
+    margin-top:5px;
+}
+.any-input{
+    height: 30px;
+}
+.create-button{
+    margin-top:15px;
+    background-color: #2196F3;
+    border: none;
+    height: 50px;
+    width: 150px;
+    color: white;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 1px;
+    font-size: 22px;
+    margin-bottom: 20px;
+}

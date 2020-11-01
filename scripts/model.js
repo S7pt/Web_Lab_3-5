@@ -9,15 +9,15 @@ export class Insect {
 export const InsectTemplate = ( id, name, price, description ) => 
     `<div class="template-div">
     <div class="template-image"></div>
-    <h3 class="template-title">${name}</h3>
+    <h3 class="template-title">${id}. ${name}</h3>
     <p class="template-text">${description}</p>
     <div class="template-price">
         <p class="template-price-text">Price: </p>
         <p class="template-price-number"> ${price}$</p>
     </div>
 <div class="aside__buttons">
-    <button id="edit-button" class="edit-button">Edit</button>
-    <button class="remove-button" data-id="${id}">Remove</button>
+    <a href="edit.html" id="edit-button" class="edit-button">Edit</a>
+    <button id="remove" class="remove-button" data-id="${id}">Remove</button>
 </div>
 </div>`;
 
