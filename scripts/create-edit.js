@@ -4,7 +4,7 @@ import {
 const ADDRESS = "http://127.0.0.1:8000/items/"
 const create = document.getElementById("create-button")
 const edit = document.getElementById("edit-button")
-if (create)
+if (create){
     create.addEventListener('click', async () => {
         if ((document.getElementById("name-input").value == '')
             || (document.getElementById("description-input").value == '')
@@ -17,6 +17,7 @@ if (create)
             window.location.href = '/';
         }
     })
+}
 (async () => {
     if (!edit)
         return
