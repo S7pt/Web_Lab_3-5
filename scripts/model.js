@@ -16,11 +16,15 @@ export const InsectTemplate = ( id, name, price, description ) =>
         <p class="template-price-number"> ${price}$</p>
     </div>
 <div class="aside__buttons">
-    <a href="edit.html" id="edit-button" class="edit-button">Edit</a>
-    <button id="remove" class="remove-button" data-id="${id}">Remove</button>
+    <a href="edit.html#${id}" id="edit-button" class="edit-button">Edit</a>
+    <button id="remove${id}" class="remove-button" data-id="${id}">Remove</button>
 </div>
 </div>`;
 
-export const AddInsect=({id,name,price,description})=>{
+export const addInsect=({id,name,price,description}, callback)=>{
 document.getElementById("content").insertAdjacentHTML('beforeend', InsectTemplate(id,name,price,description))
+document.getElementById("remove"+id).addEventListener('click',async function(){
+    await fetch("http://127.0.0.1:8000/items/"+id,{method: 'DELETE'});
+    await callback();
+})
 }

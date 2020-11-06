@@ -1,30 +1,25 @@
 import {
     Insect,
-    AddInsect
+    addInsect
 } from './model.js'
-
+const ADDRESS = "http://127.0.0.1:8000/items/"
 const elementAdder = document.getElementById('add-button');
 const count = document.getElementById('count-button');
 const sort = document.getElementById('sort-button');
 const sortSlider = document.querySelector(".slider");
 const contentBox = document.getElementById('content');
 const search = document.getElementById('search');
-const clear=document.getElementById('clear');
+const clear = document.getElementById('clear');
 let isOn = false;
-let counter = 1;
-let insects = [];
+let insects = []
 let totalPrice;
-
-elementAdder.addEventListener('click', () => {
-    let id = counter;
-    counter += 1;
+elementAdder.addEventListener('click', async () => {
     let name = Math.random().toString(25).substring(7) + " Caterpillar";
     let description = "The cute, grass-eating creature wants to be your friend";
-    let price = Math.floor(Math.random() * 100)+1;
-    let insect = new Insect(id, name, description, price);
-    insects.push(insect);
-    AddInsect({ id, name, price, description });
-    updateList(insects);
+    let price = Math.floor(Math.random() * 100) + 1;
+    let insect = new Insect(undefined, name, description, price);
+    await fetch(ADDRESS, { method: 'POST', body: JSON.stringify(insect) })
+    await Load();
     document.getElementById("search-bar").value = '';
 })
 
@@ -40,24 +35,18 @@ sort.addEventListener('click', () => {
     sortSlider.classList.toggle("active");
     if (isOn) {
         updateList(insects)
-        isOn=false;
+        isOn = false;
         return;
     }
     let sortList = [...insects];
     sortList.sort((a, b) => a.price - b.price);
     updateList(sortList);
-    isOn=true;
+    isOn = true;
 })
 
 function updateList(givenList) {
     contentBox.innerHTML = '';
-    for (let i = 0; i < givenList.length; i++) {
-        let id = givenList[i].id;
-        let name = givenList[i].name;
-        let description = givenList[i].description;
-        let price = givenList[i].price;
-        AddInsect({ id, name, description, price, })
-    }
+    givenList.map(i => addInsect(i, Load))
 }
 search.addEventListener('click', () => {
     let text = document.getElementById("search-bar").value;
@@ -66,10 +55,15 @@ search.addEventListener('click', () => {
     updateList(searchResult)
 });
 
-clear.addEventListener('click',()=>{
+clear.addEventListener('click', async () => {
     document.getElementById("search-bar").value = '';
-    insects.length=0;
-    totalPrice=0;
-    updateList(insects)
-    counter=1;
+    totalPrice = 0;
+    await fetch(ADDRESS, { method: 'DELETE' })
+    await Load()
 });
+async function Load() {
+    insects.length = 0;
+    insects.push(...(await (await fetch(ADDRESS)).json()))
+    updateList(insects);
+}
+window.addEventListener('load', Load)
